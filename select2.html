@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>select2サンプル</title>
+    <meta name="Author" content="" />
+    <!-- JQuery先に読み込む！！！ -->
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/select2.min.js"></script>
+    <!--<script type="text/javascript" src="./js/onChange.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="./css/select2.min.css">
+</head>
+
+<body>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.select2_01').select2();
+        });
+
+    </script>
+
+    <form name="test">
+        <select class="select2_01" name="linkselect" style="width: 12em" disabled="disabled">
+            <option value="sample">select2</option>
+            <option value="tote">トートバッグ</option>
+            <option value="shoulder">ショルダーバック</option>
+            <option value="ruck">リュックサック</option>
+            <option value="waist">ウエストポーチ</option>
+            <option value="clutch">クラッチバッグ</option>
+        </select>
+    </form>
+    <button id="button">解除</button>
+    <script type="text/javascript">
+        $('#button').click(function() {
+
+
+            $('.select2_01').prop("disabled", false);
+        })
+
+    </script>
+</body>
+
+</html>
